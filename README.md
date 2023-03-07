@@ -12,4 +12,5 @@
 * Main paper : https://arxiv.org/abs/2203.01677
 * TextAttack : 
   * https://github.com/anoymous92874838/text-adv-detection
+  * https://github.com/QData/TextAttack
   * https://textattack.readthedocs.io/en/latest/
