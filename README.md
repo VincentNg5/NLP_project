@@ -15,3 +15,7 @@
 * TextAttack : 
   * https://github.com/QData/TextAttack
   * https://textattack.readthedocs.io/en/latest/
+  
+ ## Dataset
+ IMDb loaded from HuggingFace, with train and test split. 
+ Attacks loaded from this repo : https://github.com/bangawayoo/adversarial-examples-in-text-classification
