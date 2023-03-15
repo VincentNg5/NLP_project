@@ -9,7 +9,7 @@ def get_embeddings(
     model,
     tokenizer,
     device,
-    max_length=2048,
+    max_length=512,
     batch_size=50,
 ):
     """
