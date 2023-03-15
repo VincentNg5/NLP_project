@@ -1,4 +1,4 @@
-# NLP_project
+# NLP Project 2023 : A baseline for detecting Textual Attacks in Sentiment Analysis Classification using Density Estimation
 
 * Vincent Nguyen
 * Solal Jarreau
