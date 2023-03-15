@@ -4,10 +4,10 @@ import torch
 import numpy as np
 
 
-def tp_bert(
+def get_embeddings(
     text_list,
-    lm_bert_model,
-    lm_bert_tokenizer,
+    model,
+    tokenizer,
     device,
     max_length=128,
     batch_size=50,
@@ -15,9 +15,9 @@ def tp_bert(
     """
     Input:
         :param text_list: Pandas.Series of strings;
-        :param lm_bert_model: BERT model (e.g. model returned by:
+        :param model: BERT or RoBERTa model (e.g. model returned by:
                 AutoModel.from_pretrained("sentence-transformers/bert-base-nli-mean-tokens"))
-        :param lm_bert_tokenizer: Transformers tokenizer (e.g. tokenizer returned by:
+        :param tokenizer: Transformers tokenizer (e.g. tokenizer returned by:
                 AutoTokenizer.from_pretrained("sentence-transformers/bert-base-nli-mean-tokens")
         :param device: torch.device object
         :param max_length: The maximum input sequence length for the model.
@@ -45,7 +45,7 @@ def tp_bert(
     outputs = []
     for batch_text in dataloader:
         # Tokenize sentences in this batch and send to device
-        encoded_input = lm_bert_tokenizer(
+        encoded_input = tokenizer(
             batch_text,
             padding=True,
             truncation=True,
@@ -56,7 +56,7 @@ def tp_bert(
 
         # Compute token embeddings for this batch
         with torch.no_grad():
-            model_output = lm_bert_model(**encoded_input)
+            model_output = model(**encoded_input)
 
         # Get sentence embeddings for this batch
         sentence_embeddings = (
