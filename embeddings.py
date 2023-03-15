@@ -9,7 +9,7 @@ def get_embeddings(
     model,
     tokenizer,
     device,
-    max_length=128,
+    max_length=2048,
     batch_size=50,
 ):
     """
@@ -20,7 +20,7 @@ def get_embeddings(
         :param tokenizer: Transformers tokenizer (e.g. tokenizer returned by:
                 AutoTokenizer.from_pretrained("sentence-transformers/bert-base-nli-mean-tokens")
         :param device: torch.device object
-        :param max_length: The maximum input sequence length for the model.
+        :param max_length: The maximum input sequence length for the model. 
     Returns: 2D Numpy.Array of shape=(no. samples, m));
              BERT embedding representation of the input sequence.
     Reference: https://github.com/zhouhanxie/react-detection/blob/main/lineardetect-bert.py, or
