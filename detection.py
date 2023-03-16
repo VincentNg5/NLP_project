@@ -96,5 +96,6 @@ def RDE_results(df_train, df_test, train_matrix, test_matrix):
     df_results = df_test.copy()
     df_results['OL_cov'] = OL_cov
     df_results['OL_mcd'] = OL_mcd
-    df_results
+    
+    return df_results
     
