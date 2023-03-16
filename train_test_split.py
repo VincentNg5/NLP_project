@@ -8,7 +8,10 @@ def create_filename(transformers, attack):
     attack = {'textfooler', 'pwws', 'bae', 'tf-adj'}
     Output : directory of the test set .csv
     '''
-    full_transformers_name = 'bert-base-uncased' if transformers=='bert' else 'roberta-base'
+    if transformers=='bert':
+        full_transformers_name = 'bert-base-uncased'
+    else:
+        full_transformers_name = 'roberta-base'
     filename = 'data/imdb/' + transformers + '/' + attack + '/' + full_transformers_name + '-imdb_' + attack + '.csv'
     return filename
     
