@@ -25,7 +25,7 @@ Because creating attacks is costly, attacks are loaded from this repo : https://
 ## Usage
 Procedure is divided in four parts : 
 * train_test_split : create training and test samples of imdb and save them in /pickle folder. 
-* embeddings : create embeddings and save them in /pickle folder. 
+* embeddings : create embeddings and save them in /embeddings folder. 
 * detection : apply adversarial detection and save results in /results folder. 
 * eval : evaluate the detection method. 
 
