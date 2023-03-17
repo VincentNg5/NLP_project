@@ -1,6 +1,6 @@
 # NLP Project 2023
 
-A baseline for detecting Textual Attacks in Sentiment Analysis Classification using Density Estimation
+Code for *A baseline for detecting Textual Attacks in Sentiment Analysis Classification using Density Estimation*.
 
 * Vincent Nguyen
 * Solal Jarreau
@@ -19,5 +19,14 @@ A baseline for detecting Textual Attacks in Sentiment Analysis Classification us
   * https://textattack.readthedocs.io/en/latest/
   
  ## Dataset
- IMDb loaded from HuggingFace, with train and test split. 
- Attacks loaded from this repo : https://github.com/bangawayoo/adversarial-examples-in-text-classification
+We work on IMDb loaded from HuggingFace, with train and test split. 
+Because creating attacks is costly, attacks are loaded from this repo : https://github.com/bangawayoo/adversarial-examples-in-text-classification. 
+
+## Usage
+Procedure is divided in four parts : 
+* train_test_split : create training and test samples of imdb and save them in /pickle folder. 
+* embeddings : create embeddings and save them in /pickle folder. 
+* detection : apply adversarial detection and save results in /results folder. 
+* eval : evaluate the detection method. 
+
+*imdb_bert* notebooks apply our adversarial detection only for BERT embeddings and a specific attack *TextFooler* while *global* notebook are compatible with different transformers architectures and different attacks. 
