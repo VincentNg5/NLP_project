@@ -30,4 +30,4 @@ Procedure is divided in four parts :
 * detection : apply adversarial detection and save results in ```/results``` folder. 
 * eval : evaluate the detection method. 
 
-```imdb_bert``` notebooks apply our adversarial detection only for BERT embeddings and a specific attack *TextFooler* while ```global``` notebook are compatible with different transformers architectures and different attacks. 
+```imdb_bert``` notebooks apply our adversarial detection only for BERT embeddings and a specific attack *TextFooler* while ```global``` notebooks are compatible with different transformers architectures and different attacks. 
